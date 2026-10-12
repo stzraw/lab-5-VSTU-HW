@@ -45,20 +45,22 @@ https://github.com/stzraw/lab-5-VSTU-HW/blob/main/lab_5_schema%20(1).png
 
 double calc(double x, double y, double z);
 
-int main(void) {
+int main()
+{
     setlocale(LC_ALL, ".UTF8");
 
-    double x = 3.74e-2;  // 3.74 * 10^-2
-    double y = -0.825;
-    double z = 0.16e2;   // 0.16 * 10^2
-    
-    double result = calc(x, y, z);
+    double x,y,z, result;
+    x = 3.74e-2;  // 3.74 * 10^-2
+    y = -0.825;
+    z = 0.16e2;   // 0.16 * 10^2
+    result = calc(x, y, z);
     
     printf("Тестовый результат v = %.4lf\n", result);
     return 0;
 }
 
-double calc(double x, double y, double z) {
+double calc(double x, double y, double z)
+{
     double chisl, znam, p1, p2, v;
 
     chisl = 1.0 + pow(sin(x + y), 2);
