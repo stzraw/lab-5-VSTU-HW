@@ -6,10 +6,10 @@
 #define _USE_MATH_DEFINES
 #define M_PI 3.14159265358979323846
 
-int task0(void);
-int task1(void);
-int task2(void);
-int task3(void);
+int task0();
+int task1();
+int task2();
+int task3();
 
 float count(float x, float y);
 double sincalc(double gr);
@@ -17,7 +17,8 @@ double resy(double x, double p);
 int chkA(int A, int B);
 int chkB(int A, int B, int C);
 
-int main(void) {
+int main()
+{
     setlocale(LC_ALL, ".UTF8");
 
     task0();
@@ -29,7 +30,7 @@ int main(void) {
 }
 
 
-int task0(void) {
+int task0() {
     float x, y, result;
     
     printf("Задание (пример):\n");
@@ -42,7 +43,7 @@ int task0(void) {
     return 0;
 }
 
-int task1(void) {
+int task1() {
     double gr, result;
     
     printf("Задание 1: \n");
@@ -55,7 +56,7 @@ int task1(void) {
     return 0;
 }
 
-int task2(void) {
+int task2() {
     double x, p, y;
     p = 0.5; 
     
@@ -69,7 +70,7 @@ int task2(void) {
     return 0;
 }
 
-int task3(void) {
+int task3() {
     double x, p, a, b, y;
     int A, B, C, varA, varB;
     p = 0.5; 
@@ -98,26 +99,31 @@ int task3(void) {
     return 0;
 }
 
-float count(float x, float y) {
+float count(float x, float y)
+{
     return sin(pow(x, 0.5f * y)) + pow(y + 8e-4f, 1 / 5.f);
 }
 
-double sincalc(double gr) {
+double sincalc(double gr)
+{
     double rad = gr * M_PI / 180.0;
     return sin(rad);
 }
 
-double resy(double x, double p) {
+double resy(double x, double p)
+{
     double a, b;
     b = exp(sqrt(fabs(x)));
     a = log(pow(p, 2) + pow(x, 3));
     return pow(a, 3) / pow(b, 2);
 }
 
-int chkA(int A, int B) {
+int chkA(int A, int B)
+{
     return (A % 2) != (B % 2);
 }
 
-int chkB(int A, int B, int C) {
+int chkB(int A, int B, int C)
+{
     return (A % 3 == 0) && (B % 3 == 0) && (C % 3 == 0);
 }
