@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -7,15 +8,23 @@ double calc(double x, double y, double z);
 
 int main()
 {
-    setlocale(LC_ALL, ".UTF8");
+    double x, y, z;
+    double result;
 
-    double x,y,z, result;
-    x = 3.74e-2;  // 3.74 * 10^-2
-    y = -0.825;
-    z = 0.16e2;   // 0.16 * 10^2
+    setlocale(LC_ALL, "RUS");
+
+    printf("Введите x: ");
+    scanf("%lf", &x);
+
+    printf("Введите y: ");
+    scanf("%lf", &y);
+
+    printf("Введите z: ");
+    scanf("%lf", &z);
+
     result = calc(x, y, z);
-    
-    printf("Тестовый результат v = %.4lf\n", result);
+
+    printf("Результат v = %.4f\n", result);
     return 0;
 }
 
